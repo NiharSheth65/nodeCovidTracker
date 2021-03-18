@@ -1,0 +1,80 @@
+<%- include('partials/header.ejs') %>
+    <div class="input-header section">
+        <form action="/" method="POST">
+            <input type="text" class="text-input" placeholder="Covid-19 in your country..." name="country">
+            <button class="submit-input">Find</button>
+        </form>
+    </div>
+    <div class="country-header section">
+        <h1 class="empty-country"><%= countryName %></h1>
+    </div>
+    <div class="card-section">
+        <div class="card-container ">
+            <div class="card one">
+                <div class="info-header">
+                    <h3>Today Cases</h3>
+                    <i class="fas fa-viruses"></i>
+                </div> 
+                <h2 class="num-header cases-today"><%= todayCase %></h2>
+                <div class="actual-number"></div>
+            </div>
+            <div class="card two">
+                <div class="info-header">
+                    <h3>Total Cases</h3>
+                    <i class="fas fa-briefcase-medical"></i>
+                </div> 
+                <h2 class="num-header cases-total"><%= totalCases %></h2>
+                <div class="actual-number"></div>
+            </div>
+            <div class="card three">
+                <div class="info-header">
+                    <h3>Today Recoveries</h3>
+                    <i class="far fa-thumbs-up"></i>
+                </div> 
+                <h2 class="num-header recoveries-today"><%= todayRecovered %></h2>
+                <div class="actual-number"></div>
+            </div>
+            <div class="card four">
+                <div class="info-header">
+                    <h3>Total Recoveries</h3>
+                    <i class="fas fa-bed"></i>
+                </div> 
+                <h2 class="num-header recoveries-total"><%= recovered %></h2>
+                <div class="actual-number"></div>
+            </div>
+            <div class="card five">
+                <div class="info-header">
+                    <h3>Today Deaths</h3>
+                    <i class="far fa-dizzy"></i>
+                </div> 
+                <h2 class="num-header deaths-today"><%= todayDeaths %></h2>
+                <div class="actual-number"></div>
+            </div>
+            <div class="card six">
+                <div class="info-header">
+                    <h3>Total Deaths</h3>
+                    <i class="fas fa-skull-crossbones"></i>
+                </div> 
+                <h2 class="num-header deaths-total"><%= deaths %></h2>
+                <div class="actual-number"></div>
+            </div>
+            <div class="card seven">
+                <div class="info-header">
+                    <h3>Cases Per Million</h3>
+                    <i class="fas fa-users"></i>
+                </div> 
+                <h2 class="num-header case-per-million"><%= casesPerMillion %></h2>
+                <div class="actual-number"></div>
+            </div>
+            <div class="card eight">
+                <div class="info-header">
+                    <h3>Active Cases</h3>
+                    <i class="far fa-clock"></i>
+                </div> 
+                <h2 class="num-header case-active"><%= active %></h2>
+                <div class="actual-number"></div>
+            </div>
+        </div>
+    </div> 
+    <script src="js/script.js"></script>
+<%- include('partials/footer.ejs') %>
